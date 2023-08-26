@@ -1,0 +1,28 @@
+print("welcome to my computer quiz")
+
+playing = input("Do you want to play?")
+
+if playing.lower() != "yes": 
+    quit() 
+print("Okay lets play:)")
+score = 0
+
+questions = {
+    "what color is the sky?" : "blue", 
+    "what color is the grass?" : "green",
+    "what color is the fire truck?" : "red",
+    "what is the color of milk?" : "white",
+    "what do cows eat?" :  "grass",
+    "what do cows say?" : "moo",
+}
+
+for pair in questions:
+    answer = input(pair)
+    if answer.lower() == questions[pair]:
+        print("Correct!")
+        score += 1
+    else:
+        print("Incorrect!")
+
+print("You got " + str(score) + "questions correct!")
+print("You got " + str((score/6) * 100)  +"%." )
