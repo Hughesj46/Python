@@ -19,9 +19,11 @@ questions = {
 for pair in questions:
     answer = input(pair)
     if answer.lower() == questions[pair]:
+        print("-----------")
         print("Correct!")
         score += 1
     else:
+        print("-----------")
         print("Incorrect!")
 
 print("You got " + str(score) + "questions correct!")
